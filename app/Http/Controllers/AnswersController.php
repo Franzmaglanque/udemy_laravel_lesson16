@@ -87,4 +87,12 @@ class AnswersController extends Controller
         $answer->delete();
         return redirect('/questions')->with('success','Answer successfully deleted!');
     }
+
+    public function test(Question $question,$answer){
+        // $this->question->best_answer_id = $this
+        $question->best_answer_id = $answer;
+        $question->save();
+        return back()->with('success','Updated best answer');
+        // return 'test';
+    }
 }
