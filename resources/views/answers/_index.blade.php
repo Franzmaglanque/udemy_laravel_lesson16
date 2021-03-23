@@ -23,7 +23,7 @@
                                     >
                                     <i class="fas fa-check fa-2x"></i>                                    
                                 </a>
-                                <form id="accept-answer-{{ $answer->id}}" action="{{route('answers.accept',$answer->id)}}" method="POST"  method="POST" style="display:none">
+                                <form id="accept-answer-{{ $answer->id}}" action="{{route('answers.accept',$answer->id)}}" method="POST" style="display:none">
                                     @csrf
                                 </form>
                                 @else
